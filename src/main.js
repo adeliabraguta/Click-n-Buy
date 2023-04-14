@@ -1,5 +1,26 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import './style.css'
 import App from './App.vue'
 import {createPinia} from "pinia";
-createApp(App).use(createPinia()).mount('#app')
+import {createRouter, createWebHistory} from "vue-router";
+import HomeComponent from "./components/HomeComponent.vue";
+import ChartComponent from "./components/ChartComponent.vue";
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        {
+            path: '/',
+            name: HomeComponent,
+            component: HomeComponent
+        },
+        {
+            path: '/ChartComponent',
+            name: ChartComponent,
+            component: ChartComponent
+        }
+    ]
+})
+
+
+createApp(App).use(createPinia()).use(router).mount('#app')
