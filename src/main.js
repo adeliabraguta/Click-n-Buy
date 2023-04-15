@@ -19,7 +19,14 @@ const router = createRouter({
             name: ChartComponent,
             component: ChartComponent
         }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ left: 0, top: 0 })
+            }, 400)
+        })
+    }
 })
 
 

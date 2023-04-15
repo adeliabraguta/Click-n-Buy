@@ -8,7 +8,8 @@ defineProps({
     "product":{
         type: Object,
         required: true
-    }
+    },
+
 })
 const store = useProductsStore()
 onBeforeMount(() => {
@@ -18,13 +19,12 @@ onBeforeMount(() => {
 <template>
 <div>
     <div class="product">
-
-        <img class="img" :src="product.images[0]"/>
+        <img class="img" :src="product.image"/>
         <div class="info">
-            <h2 class="title">{{product.title}}</h2>
+            <h2 class="title">{{product.name}}</h2>
                 <p class="price">${{product.price}}</p>
             <div class="icon-div">
-                <icon :class="{active: product.chart}" @click="store.toggleChart(product.id)" class="icon" icon="material-symbols:add-shopping-cart"/>
+                <icon :class="{active: product.inChart}" @click="store.toggleChart(product.id)" class="icon" icon="material-symbols:add-shopping-cart"/>
             </div>
         </div>
 

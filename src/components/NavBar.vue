@@ -18,17 +18,20 @@ const favs = ref(false);
             <router-link class="router" to="/">
                 <h1 class="title">Shop Now</h1>
             </router-link>
-                <div class="chart" @click="favs = !favs" >
-                    <icon class="icon" icon="uil:shopping-cart" ></icon>
-                    <h1 class="number">{{ store.chartCountTotal }}</h1>
+            <router-link class="router" to="/ChartComponent">
+                <div class="chart" @click="favs = !favs">
+                    <icon class="icon" icon="uil:shopping-cart"></icon>
+                    <h1 class="number">{{ store.chartCount }}</h1>
                 </div>
-            <div class="position">
-                <div v-if="favs" class="chart-component">
-                    <ChartComponent/>
-                </div>
-                <div v-else></div>
-            </div>
+            </router-link>
 
+
+            <!--            <div class="position">-->
+            <!--                <div v-if="favs" class="chart-component">-->
+            <!--                    <ChartComponent/>-->
+            <!--                </div>-->
+            <!--                <div v-else></div>-->
+            <!--            </div>-->
 
 
         </div>
@@ -49,32 +52,34 @@ const favs = ref(false);
   .nav {
     height: 60px;
     padding: 0 48px;
-    display: grid;
-      grid-template-columns: 1fr 1fr;
-align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-   .router{
-       text-decoration: none;
-   }
+    .router {
+      text-decoration: none;
+    }
+
     .title {
       color: #102A43;
       margin: 0;
       font-size: 24px;
-        transition: 0.3s;
-        &:hover{
-            color: #0A6C74;
-        }
+      transition: 0.3s;
+
+      &:hover {
+        color: #0A6C74;
+      }
 
     }
 
     .chart {
-        justify-self: end;
-        cursor: pointer;
-        position: relative;
+      justify-self: end;
+      cursor: pointer;
+      position: relative;
       display: flex;
       height: 60px;
       align-items: center;
-        transition: 0.3s;
+      transition: 0.3s;
 
 
       .number {
@@ -87,21 +92,22 @@ align-items: center;
         color: #102A43;
         width: 24px;
         height: 24px;
-          &:hover{
-              color: #0A6C74;
-          }
+
+        &:hover {
+          color: #0A6C74;
+        }
       }
     }
 
-      .chart-component{
-          right: 0;
-          z-index: 1;
-          position: absolute;
-          top: 62px;
-          right: 0;
+    .chart-component {
+      right: 0;
+      z-index: 1;
+      position: absolute;
+      top: 62px;
+      right: 0;
 
 
-      }
+    }
   }
 }
 </style>

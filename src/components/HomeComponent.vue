@@ -48,7 +48,7 @@ onBeforeMount(() => {
             </div>
             <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <div class="grid">
-                <div class="class best" v-for="(product,index) in store.products.slice(3,9)" :key="product.id">
+                <div class="class best" v-for="(product,index) in store.products.slice(0,6)" :key="product.id">
                     <div>
                         <ProductComponent :product="product"/>
                     </div>

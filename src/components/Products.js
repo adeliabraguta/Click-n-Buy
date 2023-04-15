@@ -6,28 +6,37 @@ export const useProductsStore = defineStore('products', {
     }),
     getters: {
         chart() {
-            return this.products.filter(product => product.chart())
+            return this.products.filter(product => product.inChart)
         },
         chartCount() {
             return this.products.reduce((prev, curr) => {
-                return curr.chart ? prev + 1 : prev;
+                return curr.inChart ? prev + 1 : prev;
             },0)
         },
         chartCountTotal(id,price){
             return this.products.reduce((prev, curr)=>{
-                return curr.chart ? prev + curr.price : prev;
+                return curr.inChart ? prev + curr.price : prev;
             },0)
         }
     },
     actions: {
         async fetchProducts() {
-            const res = await fetch("https://api.escuelajs.co/api/v1/products?offset=0&limit=20")
+            const res = await fetch("http://localhost:3000/products")
             const data = await res.json();
             this.products = data;
         },
-        toggleChart(id) {
+        async toggleChart(id) {
             const like = this.products.find(product => product.id === id)
-            like.chart = !like.chart;
+            like.inChart = !like.inChart;
+
+            const res = await fetch("http://localhost:3000/products/" + id,{
+                method: 'PATCH',
+                body: JSON.stringify({inChart: like.inChart}),
+                headers: {'Content-Type': 'application/json'}
+            })
+            if(res.error){
+                console.log(res.error)
+            }
         }
     },
 })
