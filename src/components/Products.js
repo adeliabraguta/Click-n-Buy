@@ -1,6 +1,6 @@
 import {defineStore} from "pinia";
 
-export const useProductsStore = defineStore('products', {
+export const useProductsStore = defineStore('products',  {
     state: () => ({
         products: [],
     }),
@@ -22,8 +22,8 @@ export const useProductsStore = defineStore('products', {
     actions: {
         async fetchProducts() {
             const res = await fetch("http://localhost:3000/products")
-            const data = await res.json();
-            this.products = data;
+            const datas = await res.json();
+            this.products = datas;
         },
         async toggleChart(id) {
             const like = this.products.find(product => product.id === id)
@@ -38,5 +38,18 @@ export const useProductsStore = defineStore('products', {
                 console.log(res.error)
             }
         }
+    },
+})
+
+export const useInfo= defineStore('info',  {
+    state: () => ({
+        info: []
+    }),
+    actions: {
+        async fetchInfo() {
+            const res = await fetch("http://localhost:3000/info")
+            const data = await res.json();
+            this.info = data;
+        },
     },
 })

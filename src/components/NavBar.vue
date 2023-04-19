@@ -64,7 +64,8 @@ const favs = ref(false);
       color: #102A43;
       margin: 0;
       font-size: 24px;
-      transition: 0.3s;
+        transition: 0.3s ease;
+
 
       &:hover {
         color: #0A6C74;

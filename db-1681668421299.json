@@ -1,0 +1,202 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Almond Toe Court Shoes, Patent Black",
+      "category": "Womens Footwear",
+      "price": 99,
+      "stock": 5,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=1",
+        "https://source.unsplash.com/random/800x800/?img=2",
+        "https://source.unsplash.com/random/800x800/?img=3"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=1",
+      "inChart": true,
+      "liked": false,
+      "chart": true
+    },
+    {
+      "id": 2,
+      "name": "Suede Shoes, Blue",
+      "category": "Womens Footwear",
+      "price": 42,
+      "stock": 4,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=4",
+        "https://source.unsplash.com/random/800x800/?img=5",
+        "https://source.unsplash.com/random/800x800/?img=6"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=4",
+      "inChart": false,
+      "liked": false,
+      "chart": true
+    },
+    {
+      "id": 3,
+      "name": "Leather Driver Saddle Loafers, Tan",
+      "category": "Mens Footwear",
+      "price": 34,
+      "stock": 12,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=7",
+        "https://source.unsplash.com/random/800x800/?img=8",
+        "https://source.unsplash.com/random/800x800/?img=9"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=7",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 4,
+      "name": "Flip Flops, Red",
+      "category": "Mens Footwear",
+      "price": 19,
+      "stock": 6,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=10",
+        "https://source.unsplash.com/random/800x800/?img=11",
+        "https://source.unsplash.com/random/800x800/?img=12"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=10",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 5,
+      "name": "Flip Flops, Blue",
+      "category": "Mens Footwear",
+      "price": 19,
+      "stock": 0,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=13",
+        "https://source.unsplash.com/random/800x800/?img=14",
+        "https://source.unsplash.com/random/800x800/?img=15"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=13",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 6,
+      "name": "Gold Button Cardigan, Black",
+      "category": "Womens Casualwear",
+      "price": 167,
+      "stock": 6,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=16",
+        "https://source.unsplash.com/random/800x800/?img=17",
+        "https://source.unsplash.com/random/800x800/?img=18"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=16",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 7,
+      "name": "Cotton Shorts, Medium Red",
+      "category": "Womens Casualwear",
+      "price": 30,
+      "stock": 5,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=19",
+        "https://source.unsplash.com/random/800x800/?img=20",
+        "https://source.unsplash.com/random/800x800/?img=21"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=19",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 8,
+      "name": "Fine Stripe Short Sleeve￼Shirt, Grey",
+      "category": "Mens Casualwear",
+      "price": 49.99,
+      "stock": 9,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=22",
+        "https://source.unsplash.com/random/800x800/?img=23",
+        "https://source.unsplash.com/random/800x800/?img=24"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=22",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 9,
+      "name": "Fine Stripe Short Sleeve￼Shirt, Green",
+      "category": "Mens Casualwear",
+      "price": 49.99,
+      "offer": 39.99,
+      "stock": 9,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=25",
+        "https://source.unsplash.com/random/800x800/?img=26",
+        "https://source.unsplash.com/random/800x800/?img=27"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=25",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 10,
+      "name": "Sharkskin Waistcoat, Charcoal",
+      "category": "Mens Formalwear",
+      "price": 75,
+      "stock": 2,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=28",
+        "https://source.unsplash.com/random/800x800/?img=29",
+        "https://source.unsplash.com/random/800x800/?img=30"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=28",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 11,
+      "name": "Lightweight Patch Pocket￼Blazer, Deer",
+      "category": "Mens Formalwear",
+      "price": 175.5,
+      "stock": 1,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=31",
+        "https://source.unsplash.com/random/800x800/?img=32",
+        "https://source.unsplash.com/random/800x800/?img=33"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=31",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 12,
+      "name": "Bird Print Dress, Black",
+      "category": "Womens Formalwear",
+      "price": 270,
+      "stock": 10,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=34",
+        "https://source.unsplash.com/random/800x800/?img=35",
+        "https://source.unsplash.com/random/800x800/?img=36"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=34",
+      "inChart": false,
+      "liked": false
+    },
+    {
+      "id": 13,
+      "name": "Mid Twist Cut-Out Dress, Pink",
+      "category": "Womens Formalwear",
+      "price": 540,
+      "stock": 5,
+      "images": [
+        "https://source.unsplash.com/random/800x800/?img=37",
+        "https://source.unsplash.com/random/800x800/?img=38",
+        "https://source.unsplash.com/random/800x800/?img=39"
+      ],
+      "image": "https://source.unsplash.com/random/800x800/?img=37",
+      "inChart": false,
+      "liked": false
+    }
+  ]
+}
