@@ -27,15 +27,23 @@ onBeforeMount(() => {
                 </div>
             </div>
             <div class="sum">
+                <p class="delivery">Delivery</p>
+                <p class="delivery-price">$5</p>
                 <h2 class="desc">Total</h2>
-                <p class="total">${{ store.chartCountTotal }}</p>
+                <p class="total">${{ store.chartCountTotal + 5 }}</p>
             </div>
+            <router-link class="delivery" to="/DeliveryComponent">
+                <div class="order">
+                    COMPLETE THE ORDER
+                </div>
+            </router-link>
         </div>
     </div>
 </template>
 
 <style scoped>
 .chart {
+
     background-color: #F0F4F8;
     padding-top: 64px;
     color: #102A43;
@@ -68,17 +76,27 @@ onBeforeMount(() => {
         gap: 32px;
         border-top: 1px solid #102A43;
         border-bottom: 1px solid #102A43;
-        padding: 48px;
+        padding: 32px;
     }
 
     .sum {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         width: 50vw;
-        padding-bottom: 96px;
+
+        .delivery {
+            color: #102A43;
+            font-size: 16px;
+        }
+
+        .delivery-price {
+            color: #102A43;
+            justify-self: end;
+            font-size: 18px;
+        }
 
         .desc {
+            color: #102A43;
             margin: 0;
         }
 
@@ -91,5 +109,26 @@ onBeforeMount(() => {
             justify-self: end;
         }
     }
+
+    .delivery {
+        text-decoration: none;
+
+        .order {
+            text-align: center;
+            background-color: #40C3F7;
+            padding: 24px;
+            color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-bottom: 96px;
+            font-size: 16px;
+
+            &:hover {
+                background-color: #1992D4;
+            }
+        }
+    }
+
 }
 </style>

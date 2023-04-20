@@ -5,6 +5,8 @@ import {createPinia} from "pinia";
 import {createRouter, createWebHistory} from "vue-router";
 import HomeComponent from "./components/HomeComponent.vue";
 import ChartComponent from "./components/ChartComponent.vue";
+import DeliveryComponent from "./components/DeliveryComponent.vue";
+import ReviewPayments from "./components/ReviewPayments.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -18,12 +20,22 @@ const router = createRouter({
             path: '/ChartComponent',
             name: ChartComponent,
             component: ChartComponent
+        },
+        {
+            path: '/DeliveryComponent',
+            name: DeliveryComponent,
+            component: DeliveryComponent
+        },
+        {
+            path: '/ReviewPayments',
+            name: ReviewPayments,
+            component: ReviewPayments
         }
     ],
     scrollBehavior(to, from, savedPosition) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve({ left: 0, top: 0 })
+                resolve({left: 0, top: 0})
             }, 400)
         })
     }

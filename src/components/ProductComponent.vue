@@ -35,20 +35,21 @@ onBeforeMount(() => {
 <style scoped lang="scss">
 .product{
     background-color: white;
-    height: 450px;
     width: 20vw;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: grid;
+
     .img{
         height: 350px;
         width: 100%;
         object-fit: cover;
     }
     .info{
+        height: 80px;
         padding: 24px;
         display: grid;
         grid-template-columns: 5fr 0.5fr;
-        align-items: center;
+        row-gap: 4px;
         .title{
             margin: 0;
             font-size: 18px;
@@ -61,12 +62,15 @@ onBeforeMount(() => {
             font-weight: 400;
             letter-spacing: 1px;
             grid-column: 1;
+            align-self: end;
         }
         .icon-div{
             grid-row: 1 ;
             grid-column: 2;
             display: flex;
             position: relative;
+            cursor: pointer;
+
 
 
         .icon{
@@ -74,6 +78,8 @@ onBeforeMount(() => {
             height: 24px;
             width: 24px;
             color: #2CB1BC;
+            transition: 0.3s ease;
+
 
             &:hover{
                 color: #0E7C86;
@@ -91,7 +97,7 @@ onBeforeMount(() => {
             text-align: center;
             border-radius: 5px;
             padding: 6px 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 3s ease;
             position: absolute;
             z-index: 1;
             left: -250%;
