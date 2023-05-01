@@ -12,9 +12,10 @@
         "https://source.unsplash.com/random/800x800/?img=3"
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=1",
-      "inChart": true,
+      "inChart": false,
       "liked": false,
-      "chart": true
+      "chart": true,
+      "slug": "product-1"
     },
     {
       "id": 2,
@@ -28,9 +29,10 @@
         "https://source.unsplash.com/random/800x800/?img=6"
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=4",
-      "inChart": true,
+      "inChart": false,
       "liked": false,
-      "chart": true
+      "chart": true,
+      "slug": "product-2"
     },
     {
       "id": 3,
@@ -45,7 +47,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=7",
       "inChart": true,
-      "liked": false
+      "liked": false,
+      "slug": "product-3"
     },
     {
       "id": 4,
@@ -60,7 +63,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=10",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-4"
     },
     {
       "id": 5,
@@ -75,7 +79,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=13",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-5"
     },
     {
       "id": 6,
@@ -89,8 +94,9 @@
         "https://source.unsplash.com/random/800x800/?img=18"
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=16",
-      "inChart": false,
-      "liked": false
+      "inChart": true,
+      "liked": false,
+      "slug": "product-6"
     },
     {
       "id": 7,
@@ -105,7 +111,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=19",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-7"
     },
     {
       "id": 8,
@@ -120,7 +127,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=22",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-8"
     },
     {
       "id": 9,
@@ -136,7 +144,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=25",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-9"
     },
     {
       "id": 10,
@@ -151,7 +160,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=28",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-10"
     },
     {
       "id": 11,
@@ -166,7 +176,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=31",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-11"
     },
     {
       "id": 12,
@@ -181,7 +192,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=34",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-12"
     },
     {
       "id": 13,
@@ -196,7 +208,8 @@
       ],
       "image": "https://source.unsplash.com/random/800x800/?img=37",
       "inChart": false,
-      "liked": false
+      "liked": false,
+      "slug": "product-13"
     }
   ],
   "info": [
@@ -210,5 +223,6 @@
       "entrance": "",
       "apartment": "",
       "comments": ""
-    }]
+    }
+  ]
 }

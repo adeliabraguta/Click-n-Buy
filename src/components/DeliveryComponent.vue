@@ -1,15 +1,30 @@
 <script setup>
 import {Icon} from "@iconify/vue";
-import {onBeforeMount, ref} from "vue";
-import {useInfo} from "./Products.js";
+import {computed, onBeforeMount, ref} from "vue";
+import {useInfo, useProductsStore} from "./Products.js";
 
 const info = useInfo()
 onBeforeMount(() => {
     info.fetchInfo()
 })
-const handleSubmit = () => {
-    console.log(info)
+
+// const validName = computed(() => {
+//     return  && !!info.name
+// })
+const validForm = computed(() => {
+    return !!info.email && !!info.name && !!info.phone && !!info.location
+        && !!info.street && !!info.houseNumber && !!info.entrance && !!info.apartment
+})
+
+function handleSubmit() {
+    if (validForm.value) {
+        console.log('valid')
+    } else {
+        console.log("invalid")
+    }
 }
+
+
 </script>
 
 <template>
@@ -19,12 +34,12 @@ const handleSubmit = () => {
                 <icon class="icon" icon="carbon:delivery-parcel"/>
                 Delivery
             </h2>
-            <form @submit.stop.prevent="handleSubmit" class="form">
+            <form @submit.prevent="handleSubmit" class="form">
                 <input class="input" placeholder="E-mail*" type="email" v-model.trim="info.email">
-                <input class="input" placeholder="Name and Surname*" type="text" v-model.trim="info.name">
+                <input class="input" placeholder="Name and Surname*" type="text" v-model="info.name">
                 <input class="input" placeholder="Phone*" type="text" v-model.trim="info.phone">
                 <p class="address">Delivery address</p>
-                <input class="input" placeholder="E-mail*" type="text" v-model.trim="info.location">
+                <input class="input" placeholder="Location*" type="text" v-model.trim="info.location">
                 <input class="input" placeholder="Street*" type="text" v-model.trim="info.street">
                 <div class="address-details">
                     <input class="input input-details" placeholder="House Number*" type="text"
@@ -34,8 +49,10 @@ const handleSubmit = () => {
                     <input class="input input-details" placeholder="Apartment*" type="text"
                            v-model.trim="info.apartment">
                 </div>
-                <button @click="$router.push('/ReviewPayments')" class="submit">NEXT</button>
-
+                <p class="info">Fields marked with * are required</p>
+                <button @click="$router.push('/ReviewPayments')" :class="{ 'submit-disabled': !validForm }"
+                        :disabled="!validForm" class="submit">NEXT
+                </button>
             </form>
         </div>
 
@@ -74,6 +91,11 @@ const handleSubmit = () => {
     width: 45vw;
     gap: 32px;
 
+    .info {
+      color: #40C3F7;
+        font-size: 16px;
+    }
+
     .submit {
       border: none;
       background-color: #38BEC9;
@@ -90,7 +112,18 @@ const handleSubmit = () => {
       &:hover {
         background-color: #14919B;
       }
+
     }
+
+    .submit-disabled {
+      background-color: #829AB1;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #829AB1;
+      }
+    }
+
 
     .input {
       color: #102A43;

@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import {ref} from "vue";
 
 export const useProductsStore = defineStore('products',  {
     state: () => ({
@@ -43,13 +44,13 @@ export const useProductsStore = defineStore('products',  {
 
 export const useInfo= defineStore('info',  {
     state: () => ({
-        info: []
+        info: ref([])
     }),
     actions: {
         async fetchInfo() {
             const res = await fetch("http://localhost:3000/info")
             const data = await res.json();
-            this.info = data;
+            this.info.value = data;
         },
     },
 })

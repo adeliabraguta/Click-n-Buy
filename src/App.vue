@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HomeComponent.vue'
 import NavBar from "./components/NavBar.vue"
+import Footer from "./components/FooterComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 </script>
 
 <template>
@@ -10,6 +12,7 @@ import NavBar from "./components/NavBar.vue"
             <component :is="Component" :key="$route.path"/>
         </transition>
     </router-view>
+    <FooterComponent/>
 
 </template>
 

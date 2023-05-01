@@ -65,11 +65,12 @@ onBeforeMount(() => {
                 <h2 class="desc">Total</h2>
                 <p class="total">${{ store.chartCountTotal + 5 }}</p>
             </div>
-            <router-link class="delivery" to="/DeliveryComponent">
+
+            <div class="delivery"   @click="store.products.inChart === false && store.products.chart === false">
                 <div class="order">
                     ORDER
                 </div>
-            </router-link>
+            </div>
         </div>
         </div>
         </div>

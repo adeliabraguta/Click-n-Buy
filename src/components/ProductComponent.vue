@@ -1,120 +1,123 @@
-
 <script setup>
-import {Icon} from "@iconify/vue";
+
+import {computed, ref} from "vue";
+import {useRoute} from "vue-router";
 import {useProductsStore} from "./Products.js";
-import {onBeforeMount} from "vue";
+import {Icon} from "@iconify/vue";
 
-defineProps({
-    "product":{
-        type: Object,
-        required: true
-    },
+const destinationsData = useProductsStore()
+const destinationId = computed(() => parseInt(useRoute().params.id));
+const destination = computed(() => destinationsData.products.find(destination => destination.id === destinationId.value))
+let buttonAdd = ref(false);
 
-})
-const store = useProductsStore()
-onBeforeMount(() => {
-    store.fetchProducts()
-})
 </script>
+
 <template>
-<div>
-    <div class="product">
-        <img class="img" :src="product.image"/>
-        <div class="info">
-            <h2 class="title">{{product.name}}</h2>
-                <p class="price">${{product.price}}</p>
-            <div class="icon-div">
-                <icon :class="{active: product.inChart}" @click="store.toggleChart(product.id)" class="icon" icon="material-symbols:add-shopping-cart"/>
+    <div>
+        <div class="product">
+            <div class="img-div">
+                <img class="img" :src="destination.images[0]"
+                     alt="product image"/>
+                <img class="img" :src="destination.images[1]" alt="product image"/>
+            </div>
+            <div class="info">
+                <div class="info-2">
+                    <h2 class="title">{{ destination.name }}</h2>
+                    <p class="category">{{ destination.category }} </p>
+                    <p class="price">${{ destination.price }}</p>
+                </div>
+
+                <div class="chart" :class="{active: destination.inChart}"
+                     @click="destinationsData.toggleChart(destination.id), buttonAdd = !buttonAdd ">
+                    {{ buttonAdd ? 'REMOVE' : 'ADD TO CHART' }}
+                    <icon class="icon" icon="material-symbols:add-shopping-cart"/>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
 </template>
 
 <style scoped lang="scss">
-.product{
-    background-color: white;
-    width: 20vw;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    display: grid;
+.product {
+  padding: 128px 96px;
+  display: grid;
+  column-gap: 64px;
+  grid-template-columns: 1fr 2fr;
 
-    .img{
-        height: 350px;
-        width: 100%;
-        object-fit: cover;
+  .img-div {
+    display: flex;
+    gap: 12px;
+    position: relative;
+
+    .img {
+      height: 75vh;
+      width: 25vw;
+      object-fit: cover;
+
     }
-    .info{
-        height: 80px;
-        padding: 24px;
+  }
+
+  .info {
+      height: 75vh;
+
+    color: #102A43;
+    display: flex;
+      flex-direction: column;
+    gap: 64px;
+    width: 30vw;
+      justify-content: end;
+    .info-2{
         display: grid;
-        grid-template-columns: 5fr 0.5fr;
-        row-gap: 4px;
-        .title{
-            margin: 0;
-            font-size: 18px;
-            color: #102A43;
-            font-weight: 400;
-        }
-        .price{
-            margin: 0;
-            color: #829AB1;
-            font-weight: 400;
-            letter-spacing: 1px;
-            grid-column: 1;
-            align-self: end;
-        }
-        .icon-div{
-            grid-row: 1 ;
-            grid-column: 2;
-            display: flex;
-            position: relative;
-            cursor: pointer;
+        gap: 12px;
 
-
-
-        .icon{
-            justify-self: end;
-            height: 24px;
-            width: 24px;
-            color: #2CB1BC;
-            transition: 0.3s ease;
-
-
-            &:hover{
-                color: #0E7C86;
-            }
-        }
-
-        }
-        .icon-div:before {
-            content: "Add to chart";
-            visibility: hidden;
-            opacity: 1;
-            width: 140px;
-            background-color: #102A43;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 6px 0;
-            transition: opacity 3s ease;
-            position: absolute;
-            z-index: 1;
-            left: -250%;
-            top: -180%;
-        }
-
-        .icon-div:hover:before {
-            opacity: 1;
-            visibility: visible;
-        }
-
-.icon.active{
-    color: #0A6C74;
-}
+    .title {
+      margin: 0;
     }
 
+    .category {
+      margin: 0;
+      letter-spacing: 1px;
 
 
+    }
+  }
+
+
+  .price {
+    color: #0A6C74;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+
+  }
+  }
+
+
+
+  .chart {
+    cursor: pointer;
+    transition: 0.3s all ease;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: white;
+    padding: 18px;
+    background-color: #40C3F7;
+    letter-spacing: 1px;
+    width: 170px;
+      height: 30px;
+    justify-content: center;
+
+    &:hover {
+      background-color: #1992D4;
+    }
+
+    .icon {
+      height: 24px;
+      width: 24px;
+    }
+  }
 }
+
 </style>

@@ -1,7 +1,7 @@
 <script setup>
 
 import {Icon} from "@iconify/vue";
-import ProductComponent from "./ProductComponent.vue";
+import ProductComponent from "./ProductItem.vue";
 import {useProductsStore} from "./Products.js";
 import {onBeforeMount} from "vue";
 import ChartItem from "./ChartItem.vue";
@@ -20,11 +20,17 @@ onBeforeMount(() => {
                 <h2 class="your-chart">Your Chart</h2>
             </div>
             <div class="items">
-                <div class=" best" v-for="(product,index) in store.chart" :key="product.id">
-                    <div>
-                        <ChartItem :product="product"/>
+                <div v-if="store.chartCount == 0">
+                    <div class="no-items">No items yet</div>
+                </div>
+                <div v-else>
+                    <div class=" best" v-for="(product,index) in store.chart" :key="product.id">
+                        <div>
+                            <ChartItem :product="product"/>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="sum">
                 <p class="delivery">Delivery</p>
@@ -77,6 +83,10 @@ onBeforeMount(() => {
         border-top: 1px solid #102A43;
         border-bottom: 1px solid #102A43;
         padding: 32px;
+        .no-items{
+            color: #102A43;
+            text-align: center;
+        }
     }
 
     .sum {

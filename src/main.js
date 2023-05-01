@@ -7,6 +7,9 @@ import HomeComponent from "./components/HomeComponent.vue";
 import ChartComponent from "./components/ChartComponent.vue";
 import DeliveryComponent from "./components/DeliveryComponent.vue";
 import ReviewPayments from "./components/ReviewPayments.vue";
+import CloseOrder from "./components/CloseOrder.vue";
+import CatalogComponent from "./components/CatalogComponent.vue";
+import ProductComponent from "./components/ProductComponent.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -30,6 +33,22 @@ const router = createRouter({
             path: '/ReviewPayments',
             name: ReviewPayments,
             component: ReviewPayments
+        },
+        {
+            path: '/CloseOrder',
+            name: CloseOrder,
+            component: CloseOrder
+        },
+        {
+            path: '/CatalogComponent',
+            name: CatalogComponent,
+            component: CatalogComponent
+        },
+        {
+            path: '/product/:id/:slug',
+            name: 'product.component',
+            component: () => import('./components/ProductComponent.vue')
+
         }
     ],
     scrollBehavior(to, from, savedPosition) {
