@@ -1,7 +1,6 @@
-# Vue 3 + Vite
+# Shop Now
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A small Vuejs shopping website project 
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![Screenshot 2023-05-02 191335](https://user-images.githubusercontent.com/89931941/235724104-eb24d153-dd1a-45ef-b80d-316f504d7ca6.png)
