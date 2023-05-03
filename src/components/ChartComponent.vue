@@ -24,7 +24,7 @@ onBeforeMount(() => {
                     <div class="no-items">No items yet</div>
                 </div>
                 <div v-else>
-                    <div class=" best" v-for="(product,index) in store.chart" :key="product.id">
+                    <div class="best" v-for="(product,index) in store.chart" :key="product.id">
                         <div>
                             <ChartItem :product="product"/>
                         </div>
@@ -82,11 +82,15 @@ onBeforeMount(() => {
         gap: 32px;
         border-top: 1px solid #102A43;
         border-bottom: 1px solid #102A43;
-        padding: 32px;
+        padding: 32px 32px 0px 32px;
         .no-items{
             color: #102A43;
             text-align: center;
         }
+        .best{
+            padding-bottom: 32px;
+        }
+
     }
 
     .sum {
