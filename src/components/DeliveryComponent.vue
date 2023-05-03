@@ -103,7 +103,7 @@ function handleSubmit() {
       color: white;
       font-size: 16px;
       width: 250px;
-      margin: 24px auto;
+      margin: 24px auto 0 auto;
       text-align: center;
       letter-spacing: 1px;
       cursor: pointer;

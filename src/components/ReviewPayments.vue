@@ -89,6 +89,7 @@ onBeforeMount(() => {
   justify-content: center;
   gap: 32px;
   padding-top: 96px;
+    padding-bottom: 96px;
 
   .title{
       margin: 0;
