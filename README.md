@@ -2,7 +2,7 @@
 A small Shopping Website project 
 
 ## ⚙️ Tech stack
-✔️ VueJs
+✔️ VueJs__
 ✔️ JavaScript
 ✔️ Pinia
 ✔️ HTML, CSS
