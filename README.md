@@ -1,4 +1,4 @@
-# Shop Now
+# Click-n-Buy
 A small Shopping Website project developed in Vuejs
 
 ## Intalation
