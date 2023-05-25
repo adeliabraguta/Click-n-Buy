@@ -32,12 +32,15 @@ onBeforeMount(() => {
 <style scoped lang="scss">
 .products{
   padding-top: 96px;
+    padding-bottom: 96px;
   .title{
     color: #102A43;
     text-align: center;
+      margin: 0;
+      padding-bottom: 32px;
   }
 .grid {
-  padding: 48px 96px;
+  padding: 0 96px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   //column-gap: 48px;

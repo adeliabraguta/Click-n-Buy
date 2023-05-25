@@ -18,7 +18,7 @@ const favs = ref(false);
         <div class="nav">
             <router-link class="router" to="/">
                 <img class="img" src="../assets/shopping-bag%20(1).png">
-                <h1 class="title">Shop Now</h1>
+                <h1 class="title">Click-n-Buy</h1>
             </router-link>
 
             <router-link class="router" to="/ChartComponent">
